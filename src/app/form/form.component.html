@@ -1,0 +1,42 @@
+<ion-grid>
+    <ion-row>
+        <ion-col>
+            <!-- Inicializar lista -->
+            <ion-list>
+                <ion-list-header>
+                    Rellena todos los campos siguientes:
+                </ion-list-header>
+
+                <!-- Creacion del formulario -->
+                <form [formGroup] = "form" (ngSubmit) = "addContact()">
+
+                    <ion-item>
+                        <ion-label position="floating">Nombre(s):</ion-label>
+                        <ion-input></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label position="floating">Apellidos</ion-label>
+                        <ion-input></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label position="floating">Correo electrónico</ion-label>
+                        <ion-input type="email"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label position="floating">Teléfono</ion-label>
+                        <ion-input type="tel"></ion-input>
+                    </ion-item>
+
+                    <ion-button type="submit" expand="block">
+                        Agregar contacto
+                    </ion-button>
+
+
+                </form>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+</ion-grid>
